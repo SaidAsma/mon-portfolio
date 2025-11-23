@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asma SAID - Ingénieure en Génie Logiciel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+</head>
+<body>
+    <div id="three-container"></div>
+
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-cube logo-icon"></i>
+                    A.S.
+                </a>
+                <nav class="nav-links">
+                    <a href="#about">À Propos</a>
+                    <a href="#experience">Expériences</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Asma SAID</h1>
+                <h2>Ingénieure en Génie Logiciel | Développement Full-Stack & IA</h2>
+                <div>
+                    <a href="#contact" class="btn">Me Contacter</a>
+                    <a href="#projects" class="btn btn-outline">Voir Mes Projets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Remplacez toute la section certifications existante par ce code : -->
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">À Propos</h2>
+        <div class="card">
+            <p>Ingénieure en génie logiciel avec une expérience en développement full-stack et intelligence artificielle. Passionnée par les technologies émergentes et l'innovation, je cherche constamment à améliorer mes compétences et à relever de nouveaux défis techniques.</p>
+        </div>
+        
+        <!-- Section Formations restructurée -->
+        <h3 class="section-title" style="font-size: 2rem; margin-top: 3rem;">Formations</h3>
+        <div class="skills-categories">
+            <div class="skill-category card">
+                <h3>Ingénierie en Génie Logiciel</h3>
+                <p>Polytechnique School, Sousse (2022 - 2025)</p>
+                <ul>
+                    <li>Focus sur le développement logiciel avancé</li>
+                    <li>Projets en IA et full-stack</li>
+                </ul>
+            </div>
+            <div class="skill-category card">
+                <h3>Licence en Business Intelligence</h3>
+                <p>Polytechnique School, Sousse (2019 - 2022)</p>
+                <ul>
+                    <li>Analyse de données et visualisation</li>
+                    <li>Intégration de BI dans les applications</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Section Certifications avec photos -->
+        <h3 class="section-title" style="font-size: 2rem; margin-top: 3rem;">Certifications</h3>
+        <div class="certifications-grid" id="certificationsContainer">
+            <!-- Les certifications seront générées dynamiquement par JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Ajoutez ce modal à la fin du body, avant les scripts : -->
+<div class="certification-modal" id="certificationModal">
+    <div class="certification-modal-content">
+        <button class="close-certification-modal" id="closeCertificationModal"></button>
+        <img id="certificationModalImg" src="" alt="">
+        <h3 class="certification-modal-title" id="certificationModalTitle"></h3>
+    </div>
+</div>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="card">
+                        <h3>Stage PFE - KIDOPILOT</h3>
+                        <p><strong>Société :</strong> DIGISUBS</p>
+                        <p>Application mobile de suivi et bien-être des enfants</p>
+                        <ul>
+                            <li>Intégration d'un modèle IA (GPT-4) pour contenu éducatif personnalisé</li>
+                            <li>Système de reconnaissance vocale avec Whisper (OpenAI)</li>
+                            <li>Développement d'API REST sécurisées et tableaux de bord Power BI</li>
+                            <li>Méthodologie Agile (Scrum) avec gestion Trello</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">GPT-4</span>
+                            <span class="tag">Whisper</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <button class="learn-more-btn" data-project="kidopilot" style="margin-top: 1rem;">
+                            <i class="fas fa-info-circle"></i> en savoir plus
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="card">
+                        <h3>Stage d'été - Développeuse Web</h3>
+                        <p><strong>Société :</strong> Extincteur de Tunisie</p>
+                        <p>Conception et développement d'un site web interne pour la présentation des produits</p>
+                        <ul>
+                            <li>Intégration d'interfaces utilisateur avec design responsive</li>
+                            <li>Optimisation des performances et du référencement (SEO)</li>
+                            <li>Collaboration avec l'équipe technique pour la gestion de contenu</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="card">
+                        <h3>Développeuse Web</h3>
+                        <p><strong>Société :</strong> ADS Mania</p>
+                        <p>Création d'une plateforme web backend pour simplifier la gestion de contenu</p>
+                        <ul>
+                            <li>Développement backend avec Laravel et MongoDB</li>
+                            <li>Conception et tests d'API REST avec Postman</li>
+                            <li>Collaboration en méthodologie Agile (Scrum)</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">GitLab</span>
+                            <span class="tag">Laragon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="card">
+                        <h3>Stage PFE</h3>
+                        <p><strong>Société :</strong> WebSpirit</p>
+                        <p>Conception d'une plateforme web pour centraliser la gestion des offres de stages</p>
+                        <ul>
+                            <li>Développement backend Symfony 6.0 et frontend React.js</li>
+                            <li>Création de tableaux de bord interactifs avec Power BI</li>
+                            <li>Optimisation des performances et intégration des maquettes</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Symfony 6</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <button class="learn-more-btn" data-project="stagetn" style="margin-top: 1rem;">
+                            <i class="fas fa-info-circle"></i> en savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Mes projets</h2>
+            
+            <!-- Projets académiques améliorés -->
+            <div class="academic-projects-grid">
+                <!-- Projet Microservices -->
+                <div class="academic-project-card">
+                    <div class="academic-project-img">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="academic-project-content">
+                        <h3>Architecture Microservices</h3>
+                        <p>Développement d'une architecture basée sur les microservices avec implémentation de services REST pour la communication entre différents modules.</p>
+                        <div class="academic-project-tags">
+                            <span class="academic-tag">Spring Boot</span>
+                            <span class="academic-tag">Docker</span>
+                            <span class="academic-tag">REST API</span>
+                        </div>
+                        <div class="academic-project-actions">
+                            <button class="learn-more-btn" data-project="microservices">
+                                <i class="fas fa-info-circle"></i> en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet Pharma -->
+                <div class="academic-project-card">
+                    <div class="academic-project-img">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="academic-project-content">
+                        <h3>Pharma Management System</h3>
+                        <p>Système de gestion pharmaceutique complet développé avec Spring Boot, incluant la gestion des utilisateurs, produits, commandes et factures avec interface web Thymeleaf.</p>
+                        <div class="academic-project-tags">
+                            <span class="academic-tag">Spring Boot</span>
+                            <span class="academic-tag">Java</span>
+                            <span class="academic-tag">MySQL</span>
+                            <span class="academic-tag">Thymeleaf</span>
+                            <span class="academic-tag">JPA/Hibernate</span>
+                            <span class="academic-tag">Maven</span>
+                        </div>
+                        <div class="academic-project-actions">
+                            <button class="learn-more-btn" data-project="pharma">
+                                <i class="fas fa-info-circle"></i> en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                            
+                <!-- Projet ChatBot Mathématique -->
+                <div class="academic-project-card">
+                    <div class="academic-project-img">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="academic-project-content">
+                        <h3>ChatBot Mathématique</h3>
+                        <p>Développement d'un chatbot utilisant le traitement du langage naturel (NLP) en Python pour résoudre des problèmes mathématiques simples.</p>
+                        <div class="academic-project-tags">
+                            <span class="academic-tag">Python</span>
+                            <span class="academic-tag">NLP</span>
+                            <span class="academic-tag">Machine Learning</span>
+                        </div>
+                        <div class="academic-project-actions">
+                            <button class="learn-more-btn" data-project="chatbot">
+                                <i class="fas fa-info-circle"></i> en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet Intelligence Artificielle -->
+                <div class="academic-project-card">
+                    <div class="academic-project-img">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="academic-project-content">
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Réalisation d'un projet en intelligence artificielle intégrant des algorithmes d'apprentissage automatique et exploration de modèles avancés.</p>
+                        <div class="academic-project-tags">
+                            <span class="academic-tag">Python</span>
+                            <span class="academic-tag">TensorFlow</span>
+                            <span class="academic-tag">Machine Learning</span>
+                        </div>
+                        <div class="academic-project-actions">
+                            <button class="learn-more-btn" data-project="ai">
+                                <i class="fas fa-info-circle"></i> en savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les détails des projets -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            
+            <!-- En-tête avec logo et titre en parallèle -->
+            <div class="modal-header">
+                <div class="modal-logo" id="modalLogo">
+                    <!-- L'image sera insérée ici via JavaScript -->
+                </div>
+                <div class="modal-header-content">
+                    <h3 id="modalTitle">Titre du Projet</h3>
+                    <div class="academic-project-tags" id="modalTags"></div>
+                </div>
+            </div>
+            
+            <!-- Corps du modal -->
+            <div class="modal-body">
+                <!-- Description du projet -->
+                <div class="modal-description" id="modalDescription">
+                    Description du projet...
+                </div>
+                
+                <!-- Vidéos -->
+                <div id="modalVideos"></div>
+                
+                <!-- Technologies -->
+                <div class="modal-technologies" id="modalTechnologies">
+                    <h4>Technologies Utilisées</h4>
+                </div>
+                
+                <!-- Liens GitHub -->
+                <div class="github-links" id="modalGithubLinks"></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            
+            <div class="skills-section">
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-node-js" style="font-size: 2rem; color: #9c27b0;"></i>
+                                </div>
+                                <span class="skill-name">Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-symfony" style="font-size: 2rem; color: #000000;"></i>
+                                </div>
+                                <span class="skill-name">Symfony</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-laravel" style="font-size: 2rem; color: #ff2d20;"></i>
+                                </div>
+                                <span class="skill-name">Laravel</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-java" style="font-size: 2rem; color: #007396;"></i>
+                                </div>
+                                <span class="skill-name">Spring Boot</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-python" style="font-size: 2rem; color: #3776ab;"></i>
+                                </div>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-database" style="font-size: 2rem; color: #336791;"></i>
+                                </div>
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-react" style="font-size: 2rem; color: #61dafb;"></i>
+                                </div>
+                                <span class="skill-name">React.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-react" style="font-size: 2rem; color: #61dafb;"></i>
+                                </div>
+                                <span class="skill-name">React Native</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-vuejs" style="font-size: 2rem; color: #4fc08d;"></i>
+                                </div>
+                                <span class="skill-name">Vue.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-html5" style="font-size: 2rem; color: #e34f26;"></i>
+                                </div>
+                                <span class="skill-name">HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-css3-alt" style="font-size: 2rem; color: #1572b6;"></i>
+                                </div>
+                                <span class="skill-name">CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-js" style="font-size: 2rem; color: #f7df1e;"></i>
+                                </div>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>IA & Data</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-brain" style="font-size: 2rem; color: #ff6b6b;"></i>
+                                </div>
+                                <span class="skill-name">GPT-4</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-microphone" style="font-size: 2rem; color: #4ecdc4;"></i>
+                                </div>
+                                <span class="skill-name">Whisper</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-chart-bar" style="font-size: 2rem; color: #f9c74f;"></i>
+                                </div>
+                                <span class="skill-name">Power BI</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-robot" style="font-size: 2rem; color: #90be6d;"></i>
+                                </div>
+                                <span class="skill-name">Machine Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-language" style="font-size: 2rem; color: #577590;"></i>
+                                </div>
+                                <span class="skill-name">NLP</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-database" style="font-size: 2rem; color: #43aa8b;"></i>
+                                </div>
+                                <span class="skill-name">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Sécurité & Outils</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: #f3722c;"></i>
+                                </div>
+                                <span class="skill-name">JWT</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-lock" style="font-size: 2rem; color: #277da1;"></i>
+                                </div>
+                                <span class="skill-name">OAuth 2.0</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-git-alt" style="font-size: 2rem; color: #f05032;"></i>
+                                </div>
+                                <span class="skill-name">Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fab fa-docker" style="font-size: 2rem; color: #2496ed;"></i>
+                                </div>
+                                <span class="skill-name">Docker</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-code-branch" style="font-size: 2rem; color: #9d4edd;"></i>
+                                </div>
+                                <span class="skill-name">REST API</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">
+                                    <i class="fas fa-tasks" style="font-size: 2rem; color: #f8961e;"></i>
+                                </div>
+                                <span class="skill-name">Agile/Scrum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="card">
+                        <h3>Contact</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Localisation</h4>
+                                <p>Sousse, Tunisie</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div>
+                                <h4>Langues</h4>
+                                <p>Arabe (maternelle), Français (DELF B2), Anglais (B2)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/asma-said-ba8458215" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/SaidAsma" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:asma.said@polytechnicien.tn" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:+21652875501" title="Téléphone">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="card">
+                        <h3>Envoyez-moi un message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" id="subject" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Asma SAID</h3>
+                    <p>Ingénieure en Génie Logiciel | Développement Full-Stack & IA</p>
+                    <p class="footer-quote">"Transformer des idées innovantes en solutions technologiques"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigation Rapide</h4>
+                    <div class="quick-links">
+                        <a href="#about">À Propos</a>
+                        <a href="#experience">Expériences</a>
+                        <a href="#projects">Projets</a>
+                        <a href="#skills">Compétences</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <div class="contact-mini">
+                        <p><i class="fas fa-envelope"></i> asma.said@polytechnicine.tn</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sousse, Tunisie</p>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/asma-said-ba8458215" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/SaidAsma" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:asma.said@polytechnicien.tn" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Asma SAID. Tous droits réservés.</p>
+                <p class="footer-note">Développé avec passion et expertise</p>
+            </div> -->
+        </div>
+    </footer>
+
+    <script src="js/three-scene.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Script pour fade-in des sections au scroll -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
