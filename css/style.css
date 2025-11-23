@@ -121,7 +121,61 @@ header.scrolled {
     z-index: 5;
     padding-top: 80px; /* Compensation pour le header fixe */
 }
+/* Styles pour la section Hero avec photo */
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
 
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid rgba(156, 39, 176, 0.3);
+    box-shadow: 0 10px 30px rgba(156, 39, 176, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(156, 39, 176, 0.5);
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+/* Responsive pour la section Hero */
+@media (max-width: 768px) {
+    .hero-content-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-image {
+        flex: 0 0 200px;
+    }
+    
+    .hero-image img {
+        max-width: 200px;
+    }
+}
 .hero-content {
     max-width: 700px;
 }
@@ -164,6 +218,8 @@ header.scrolled {
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
+     margin-top: 2rem;
+
 }
 
 .btn::before {
