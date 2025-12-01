@@ -1486,3 +1486,32 @@ footer {
         left: 0;
     }
 }
+
+/* Styles pour les projets professionnels */
+.professional-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    color: #9c27b0;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #9c27b0, #e91e63);
+    border-radius: 2px;
+}
